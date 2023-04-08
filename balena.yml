@@ -1,0 +1,20 @@
+name: nupano-runtime
+type: sw.application
+description: >-
+  NUPANO runtime using BalenaOS integrated in BalenaCloud.
+assets:
+  repository:
+    type: blob.asset
+    data:
+      url: 'https://github.com/svenbrill/nupano-runtime-balena'
+  logo:
+    type: blob.asset
+    data:
+      url: >-
+        https://auth.nupano.com/resources/djtvo/login/nupano/img/mosaiq-logo.svg
+data:  
+  defaultDeviceType: genericx86-64-ext
+  supportedDeviceTypes:
+    - genericx86-64-ext
+    - generic-amd64
+version: 0.0.1
