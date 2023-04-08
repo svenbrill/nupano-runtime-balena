@@ -2,12 +2,7 @@ version: "2"
 
 services:
   runtime:
-    image: public.ecr.aws/nupano/nupano-runtime:latest
-    environment:
-      - server.port=61100
-      - logging.level.com.nupano=INFO
-      - nupano.description.manufacturer=not specified (dev)
-      - nupano.description.model-name=not specified (dev)    
+    image: public.ecr.aws/nupano/nupano-runtime:latest    
     volumes:
       - nupano_data:/nupano
     networks:
@@ -19,15 +14,10 @@ services:
 
   discovery:
     image: public.ecr.aws/nupano/nupano-runtime-discovery:latest
-    network_mode: host
-    environment:
-      - logging.level.com.nupano=INFO
+    network_mode: host    
 
   updater:
-    image: public.ecr.aws/nupano/nupano-runtime-updater:latest
-    environment:
-      - server.port=61107
-      - logging.level.com.nupano=INFO
+    image: public.ecr.aws/nupano/nupano-runtime-updater:latest    
     volumes:
       - nupano_data:/nupano
     networks:
