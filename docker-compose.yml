@@ -4,6 +4,8 @@ services:
   runtime:
     image: public.ecr.aws/nupano/nupano-runtime:latest
     environment:
+      - SERVER_PORT=61100
+      - NUPANO_APPS_DOCKER_HOST=unix:///var/run/balena.sock
       - LOGGING_LEVEL_COM_NUPANO=DEBUG
       - NUPANO_DESCRIPTION_MANUFACTURER=Brillinger
       - NUPANO_DESCRIPTION_MODEL_NAME=B1000BALENA
@@ -19,11 +21,17 @@ services:
       io.resin.features.balena-socket: '1'
 
   discovery:
-    image: public.ecr.aws/nupano/nupano-runtime-discovery:latest
-    network_mode: host    
+    image: public.ecr.aws/nupano/nupano-runtime-discovery:latest    
+    network_mode: host
+    environment:
+      - LOGGING_LEVEL_COM_NUPANO=INFO
 
   updater:
-    image: public.ecr.aws/nupano/nupano-runtime-updater:latest    
+    image: public.ecr.aws/nupano/nupano-runtime-updater:latest
+    environment:
+      - SERVER_PORT=61107
+      - NUPANO_APPS_DOCKER_HOST=unix:///var/run/balena.sock
+      - LOGGING_LEVEL_COM_NUPANO=INFO
     volumes:
       - nupano_data:/nupano
     networks:
