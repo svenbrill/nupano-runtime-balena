@@ -2,7 +2,11 @@ version: "2"
 
 services:
   runtime:
-    image: public.ecr.aws/nupano/nupano-runtime:latest    
+    image: public.ecr.aws/nupano/nupano-runtime:latest
+    environment:
+      - LOGGING_LEVEL_COM_NUPANO=DEBUG
+      - NUPANO_DESCRIPTION_MANUFACTURER=Brillinger
+      - NUPANO_DESCRIPTION_MODEL_NAME=B1000BALENA
     volumes:
       - nupano_data:/nupano
     networks:
