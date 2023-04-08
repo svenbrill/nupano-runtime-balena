@@ -17,4 +17,4 @@ data:
   supportedDeviceTypes:
     - genericx86-64-ext
     - generic-amd64
-version: 0.0.7
+version: 0.0.8
