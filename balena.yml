@@ -12,9 +12,9 @@ assets:
     data:
       url: >-
         https://auth.nupano.com/resources/djtvo/login/nupano/img/mosaiq-logo.svg
-data:  
+data:
   defaultDeviceType: genericx86-64-ext
   supportedDeviceTypes:
     - genericx86-64-ext
     - generic-amd64
-version: 0.0.2
+version: 0.0.3
