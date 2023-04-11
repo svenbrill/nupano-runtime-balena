@@ -8,7 +8,7 @@ services:
       - NUPANO_APPS_DOCKER_HOST=unix:///var/run/balena.sock
       - LOGGING_LEVEL_COM_NUPANO=DEBUG
       - NUPANO_DESCRIPTION_MANUFACTURER=Brillinger
-      - NUPANO_DESCRIPTION_MODEL_NAME=B2000BALENA
+      - NUPANO_DESCRIPTION_MODEL_NAME=B2001BALENA
     volumes:
       - nupano_data:/nupano
     networks:
