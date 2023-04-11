@@ -13,10 +13,7 @@ assets:
       url: >-
         https://auth.nupano.com/resources/djtvo/login/nupano/img/mosaiq-logo.svg
 data:
-  defaultDeviceType: genericx86-64-ext
-  applicationEnvironmentVariables:
-    - HTTP_PROXY: http://fra4.sme.zscaler.net:10181
-    - HTTPS_PROXY: http://fra4.sme.zscaler.net:10181
+  defaultDeviceType: genericx86-64-ext  
   supportedDeviceTypes:
     - genericx86-64-ext
     - generic-amd64
