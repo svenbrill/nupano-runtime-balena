@@ -6,15 +6,15 @@ assets:
   repository:
     type: blob.asset
     data:
-      url: 'https://github.com/svenbrill/nupano-runtime-balena'
+      url: 'https://github.com/mosaiqone/nupano-runtime-balena'
   logo:
     type: blob.asset
     data:
       url: >-
-        https://auth.nupano.com/resources/djtvo/login/nupano/img/mosaiq-logo.svg
+        https://raw.githubusercontent.com/mosaiqone/nupano-runtime-balena/master/logo.png
 data:
   defaultDeviceType: genericx86-64-ext  
   supportedDeviceTypes:
     - genericx86-64-ext
     - generic-amd64
-version: 0.0.2
+version: 1.0.2
