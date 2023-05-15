@@ -7,8 +7,9 @@ services:
       - SERVER_PORT=61100
       - NUPANO_APPS_DOCKER_HOST=unix:///var/run/balena.sock
       - LOGGING_LEVEL_COM_NUPANO=DEBUG
-      #- NUPANO_DESCRIPTION_MANUFACTURER=Brillinger
-      #- NUPANO_DESCRIPTION_MODEL_NAME=B3999BALENA
+      #- NUPANO_DESCRIPTION_MANUFACTURER=WELOTEC
+      #- NUPANO_DESCRIPTION_MODEL_NAME=Arrakis-pico-MK3
+      #- NUPANO_DESCRIPTION_SERIAL_NUMBER=2206002455
     volumes:
       - nupano_data:/nupano
     networks:
