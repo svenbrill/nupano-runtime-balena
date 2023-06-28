@@ -2,7 +2,7 @@ version: "2"
 
 services:
   runtime:
-    image: public.ecr.aws/nupano/nupano-runtime:latest
+    image: public.ecr.aws/nupano/nupano-runtime:1.0.2
     environment:
       - SERVER_PORT=61100
       - NUPANO_APPS_DOCKER_HOST=unix:///var/run/balena.sock
@@ -22,13 +22,13 @@ services:
       io.resin.features.balena-socket: '1'
 
   discovery:
-    image: public.ecr.aws/nupano/nupano-runtime-discovery:latest    
+    image: public.ecr.aws/nupano/nupano-runtime-discovery:1.0.2    
     network_mode: host
     environment:
       - LOGGING_LEVEL_COM_NUPANO=INFO
 
   updater:
-    image: public.ecr.aws/nupano/nupano-runtime-updater:latest
+    image: public.ecr.aws/nupano/nupano-runtime-updater:1.0.2
     environment:
       - SERVER_PORT=61107
       - NUPANO_APPS_DOCKER_HOST=unix:///var/run/balena.sock
