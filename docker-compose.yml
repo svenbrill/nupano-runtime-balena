@@ -6,7 +6,9 @@ services:
     environment:
       - SERVER_PORT=61100
       - NUPANO_APPS_DOCKER_HOST=unix:///var/run/balena.sock
-      - LOGGING_LEVEL_COM_NUPANO=DEBUG
+      - LOGGING_LEVEL_COM_NUPANO=INFO
+      - NUPANO_DOMAIN=nupano.com
+      - NUPANO_UPDATE_ENABLED=false
       #- NUPANO_DESCRIPTION_MANUFACTURER=WELOTEC
       #- NUPANO_DESCRIPTION_MODEL_NAME=Arrakis-pico-MK3
       #- NUPANO_DESCRIPTION_SERIAL_NUMBER=2206002455
@@ -16,8 +18,6 @@ services:
       - nupano_network
     ports:
       - 61100:61100/tcp
-      - 61101:61101/tcp
-      - 61106:61106/tcp
     labels:
       io.resin.features.balena-socket: '1'
 
@@ -26,21 +26,6 @@ services:
     network_mode: host
     environment:
       - LOGGING_LEVEL_COM_NUPANO=INFO
-
-  updater:
-    image: public.ecr.aws/nupano/nupano-runtime-updater:2.0.0
-    environment:
-      - SERVER_PORT=61107
-      - NUPANO_APPS_DOCKER_HOST=unix:///var/run/balena.sock
-      - LOGGING_LEVEL_COM_NUPANO=INFO
-    volumes:
-      - nupano_data:/nupano
-    networks:
-      - nupano_network
-    ports:
-      - 61107:61107/tcp
-    labels:
-      io.resin.features.balena-socket: '1'
 
 networks:
   nupano_network:
