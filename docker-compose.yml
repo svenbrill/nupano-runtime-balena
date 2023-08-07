@@ -19,7 +19,7 @@ services:
     ports:
       - 61100:61100/tcp
     labels:
-      io.resin.features.balena-socket: '1'
+      io.balena.features.balena-socket: '1'
 
   discovery:
     image: public.ecr.aws/nupano/nupano-runtime-discovery:2.0.0
