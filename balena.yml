@@ -8,21 +8,33 @@ post-provisioning: >-
   ## Overall Features
   
   -	Cloud based automation platform
+  
   -	Machine and app management
+  
   -	Public App Store
+  
   -	Organization Store
+  
   -	User Forum
   
   ## Support for machine builders
   
   -	App sharing and testing 
+  
   -	App life cycle/update management 
+  
   -	App release and publish workflow
+  
   -	App configuration and preset data
+  
   -	App reconfiguration
+  
   -	App handling ensured securely
+  
   -	Machine data management
+  
   -	Machine fleet management
+  
   -	Machine models for mass customization
   
   ## Technical concept 
@@ -30,7 +42,9 @@ post-provisioning: >-
   NUPANO consists of three parts:
   
   1. In the NUPANO cloud, machine builders manage all their machine fleet as all of their apps and assignment to specific machines. The cloud software part of NUPANO is a fully modular and dynamic multitenant microservice architecture
+  
   2. NUPANO Connect securely connects a NUPANO Runtime to the cloud when a reconfiguration or update is needed. It is a Windows or Linux service that runs on the user's engineering PC.
+  
   3. The NUPANO Runtime requires Docker infrastructure on an X86 64-bit architecture. It can be e.g. an Industry PC at machine and plant level where the machine-related apps are executed. 
   
   ## Runtime configuration
@@ -38,19 +52,25 @@ post-provisioning: >-
   The NUPANO runtime can be configured via environment variables.  
   
   |Entry|Description|Values|
+  
   |--|--|--|
+  
   |nupano.description.manufacturer|Name of manufacturer of hardware which runs the NUPANO Runtime|default: not specified|
+  
   |nupano.description.model-name|Model name of hardware|default: not specified|
-  |nupano.description.serial-number|Serial number of hardware|default: Unique ID of the NUPANO Runtime|  
+  
+  |nupano.description.serial-number|Serial number of hardware|default: Unique ID of the NUPANO Runtime|
   
   ## Join the NUPANO community!
   
   Visit [nupano.com](https://nupano.com) and find out more.
+  
   Get in touch with us nupano@lenze.com and you will be onboarded to the platform and get the user guide.
   
   ## About Lenze
   
   About Lenze Lenze is a leading automation specialist and focuses on designing efficient and sustainable processes for production and material flow. For over 75 years, the company has been a pacesetter in automation and a strong partner at the side of its customers from the machine and plant manufacturing industry. With the help of a triad consisting of electrical engineering, software and a platform strategy, Lenze supports its customers in digitization and helps them to cut costs, optimize the utilization and lifecycle of machine systems and reduce their energy consumption. Lenze’s portfolio consists of high-quality mechatronic solutions, powerful systems made of hardware and software for machine automation, and digital services for the machine and plant manufacturing industry. The Lenze Group, headquartered in Aerzen, employs around 4,000 people globally and is represented in 45 countries. The company generated revenue amounting to 830 million euros across the Group in the 2021/2022 financial year. 
+  
   [Lenze.com](https://www.lenze.com)
 assets:
   repository:
