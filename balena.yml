@@ -55,11 +55,11 @@ post-provisioning: >-
   
   |--|--|--|
   
-  |nupano.description.manufacturer|Name of manufacturer of hardware which runs the NUPANO Runtime|default: not specified|
+  |NUPANO_DESCRIPTION_MANUFACTURER|Name of manufacturer of hardware which runs the NUPANO Runtime|default: not specified|
   
-  |nupano.description.model-name|Model name of hardware|default: not specified|
+  |NUPANO_DESCRIPTION_MODEL_NAME|Model name of hardware|default: not specified|
   
-  |nupano.description.serial-number|Serial number of hardware|default: Unique ID of the NUPANO Runtime|
+  |NUPANO_DESCRIPTION_SERIAL_NUMBER|Serial number of hardware|default: Unique ID of the NUPANO Runtime|
   
   ## Join the NUPANO community!
   
