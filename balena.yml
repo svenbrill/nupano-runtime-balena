@@ -89,4 +89,4 @@ data:
   supportedDeviceTypes:
     - genericx86-64-ext
     - generic-amd64
-version: 2.3.0
+version: 2.3.1
