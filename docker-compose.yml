@@ -2,7 +2,7 @@ version: "2"
 
 services:
   runtime:
-    image: public.ecr.aws/nupano/nupano-runtime:2.4.0
+    image: public.ecr.aws/nupano/nupano-runtime:3.0.0
     environment:
       - SERVER_PORT=61100
       - NUPANO_APPS_DOCKER_HOST=unix:///var/run/balena.sock
@@ -20,16 +20,8 @@ services:
       - 61100:61100/tcp
     labels:
       io.balena.features.balena-socket: '1'
-
-  discovery:
-    image: public.ecr.aws/nupano/nupano-runtime-discovery:2.4.0
-    network_mode: host
-    environment:
-      - LOGGING_LEVEL_COM_NUPANO=INFO
-
 networks:
   nupano_network:
     driver: bridge
-
 volumes:
   nupano_data:
